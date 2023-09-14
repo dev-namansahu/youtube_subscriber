@@ -8,17 +8,31 @@ const Subscriber = require('./src/models/subscriber');
 app.use(express.json()); // Parsing JSON bodies
 app.use(express.urlencoded({ extended: false })); // Parsing URL-encoded bodies
 
-mongoose.connect('mongodb://127.0.0.1:27017/subsriberdatabase', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect('mongodb://127.0.0.1:27017/subsriberdatabase', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
-const db = mongoose.connection;
+// const db = mongoose.connection;
 
-db.on('error', (error) => console.error('Database connection error:', error));
-db.once('open', () => {
-  console.log('Connected to database');
-});
+// db.on('error', (error) => console.error('Database connection error:', error));
+// db.once('open', () => {
+//   console.log('Connected to database');
+// });
+async function connectToDatabase() {
+  try {
+    await mongoose.connect('mongodb://127.0.0.1:27017/subsriberdatabase', {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    console.log('Connected to database');
+  } catch (error) {
+    console.error('Database connection error:', error);
+  }
+}
+
+connectToDatabase();
 
 
 // Start the server
