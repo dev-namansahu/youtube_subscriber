@@ -8,7 +8,9 @@ API Endpoints
 2. "/subscribers " -> This endpoint returns an array of all subscribers in the database.
 3. "/subscribers/names " -> This endpoint returns an array of subscribers with only two fields, their name and subscribed channel
 
-   Application Folder Structure
+ 
+ 
+ Application Folder Structure
 [src/app.js] -> For handling requests and responses.
 
 [/index.js] -> To connect and start the server.
@@ -29,8 +31,8 @@ You'll need to have Node.js and MongoDB installed on your computer in order to b
 Once installed, Clone this repository to your local machine.
 
 Install the required dependencies as mentioned below by using npm install .
-
-Start the server by nodemon index.js
+Create Database using npm run build.
+Start the server by npm run start.
 
 Dependencies
 Following dependencie are needed to run this application:
@@ -38,10 +40,6 @@ Following dependencie are needed to run this application:
 express
 
 mongoose
-
-nodemon.
-
-
 
 
 Web Deployment :https://get-youtube-subscriber-db5m.onrender.com/
