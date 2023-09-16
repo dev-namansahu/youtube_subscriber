@@ -21,16 +21,6 @@ API Endpoints
 
 [src/index.html] -> The home page for the application.
 
-├── src/
-│   ├── app.js
-│   ├── createDatabase.js
-│   ├── data.js
-│   ├── index.html 
-│   └── models/
-│       ├── subscribers.js
-├── index.js   
-├── {} package-lock.json
-└── {}package.json
 
 
 Installation
